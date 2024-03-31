@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface ActorRepository extends JpaRepository<Actor, Long> {
 
-    @Query("SELECT new ge.ibsu.demo.dto.ActorFullName(a.firstName, a.lastName) FROM actor a")
+    @Query("SELECT new ge.ibsu.demo.dto.ActorFullName(a.firstName, a.lastName) FROM Actor a")
     List<ActorFullName> findAllActorNames();
 }
