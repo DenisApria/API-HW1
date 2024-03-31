@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface FilmRepository {
     @Query("SELECT new ge.ibsu.demo.dto.FilmInfo(f.title, f.description, f.rating) " +
-            "FROM film f " +
+            "FROM Film f " +
             "WHERE (:searchText IS NULL OR f.title LIKE %:searchText% OR f.description LIKE %:searchText%) " +
             "AND (:releaseYear IS NULL OR f.release_year = :releaseYear) " +
             "AND (:language IS NULL OR f.language.language = :language)")
